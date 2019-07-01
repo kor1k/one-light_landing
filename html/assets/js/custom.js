@@ -3,56 +3,55 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var resizeId;
 
-$(document).ready(function($) {
+$(document).ready(function ($) {
     "use strict";
-	
-	$('.navbar-nav .nav-link').on('click', function(){
-		$('.navbar-collapse').collapse('hide');
-	});
+
+    $('.navbar-nav .nav-link').on('click', function () {
+        $('.navbar-collapse').collapse('hide');
+    });
 
 //  "img" into "background-image" transfer
 
-    $("[data-background-image]").each(function() {
-        $(this).css("background-image", "url("+ $(this).attr("data-background-image") +")" );
+    $("[data-background-image]").each(function () {
+        $(this).css("background-image", "url(" + $(this).attr("data-background-image") + ")");
     });
 
-    $(".background--image, .img-into-bg").each(function() {
-        $(this).css("background-image", "url("+ $(this).find("img").attr("src") +")" );
+    $(".background--image, .img-into-bg").each(function () {
+        $(this).css("background-image", "url(" + $(this).find("img").attr("src") + ")");
     });
 
 //  Custom background color
 
-    $("[data-background-color]").each(function() {
-        $(this).css("background-color", $(this).attr("data-background-color")  );
+    $("[data-background-color]").each(function () {
+        $(this).css("background-color", $(this).attr("data-background-color"));
     });
 
 //  Parallax Background Image
 
-    $("[data-parallax='scroll']").each(function() {
+    $("[data-parallax='scroll']").each(function () {
         var speed = $(this).attr("data-parallax-speed");
         var $this = $(this);
         var isVisible;
         var backgroundPosition;
 
-        $this.isInViewport(function(status) {
+        $this.isInViewport(function (status) {
             if (status === "entered") {
                 isVisible = 1;
                 var position;
 
                 $(window).scroll(function () {
-                    if( isVisible === 1 ){
+                    if (isVisible === 1) {
                         position = $(window).scrollTop() - $this.offset().top;
-                        backgroundPosition = (100 - (Math.abs((-$(window).height()) - position) / ($(window).height()+$this.height()))*100);
-                        if( $this.find(".parallax-element").hasClass("background--image") ){
-                            $this.find(".background--image.parallax-element").css("background-position-y", (position/speed) + "px");
-                        }
-                        else {
-                            $this.find(".parallax-element").css("transform", "translateY(" +(position/speed)+ "px)");
+                        backgroundPosition = (100 - (Math.abs((-$(window).height()) - position) / ($(window).height() + $this.height())) * 100);
+                        if ($this.find(".parallax-element").hasClass("background--image")) {
+                            $this.find(".background--image.parallax-element").css("background-position-y", (position / speed) + "px");
+                        } else {
+                            $this.find(".parallax-element").css("transform", "translateY(" + (position / speed) + "px)");
                         }
                     }
                 });
             }
-            if (status === "leaved"){
+            if (status === "leaved") {
                 isVisible = 0;
             }
         });
@@ -73,44 +72,44 @@ $(document).ready(function($) {
 
     var $owlCarousel = $(".owl-carousel");
 
-    if( $owlCarousel.length ){
-        $owlCarousel.each(function() {
+    if ($owlCarousel.length) {
+        $owlCarousel.each(function () {
 
-            var items = parseInt( $(this).attr("data-owl-items"), 10);
-            if( !items ) items = 1;
+            var items = parseInt($(this).attr("data-owl-items"), 10);
+            if (!items) items = 1;
 
-            var nav = parseInt( $(this).attr("data-owl-nav"), 2);
-            if( !nav ) nav = 0;
+            var nav = parseInt($(this).attr("data-owl-nav"), 2);
+            if (!nav) nav = 0;
 
-            var dots = parseInt( $(this).attr("data-owl-dots"), 2);
-            if( !dots ) dots = 0;
+            var dots = parseInt($(this).attr("data-owl-dots"), 2);
+            if (!dots) dots = 0;
 
-            var center = parseInt( $(this).attr("data-owl-center"), 2);
-            if( !center ) center = 0;
+            var center = parseInt($(this).attr("data-owl-center"), 2);
+            if (!center) center = 0;
 
-            var loop = parseInt( $(this).attr("data-owl-loop"), 2);
-            if( !loop ) loop = 0;
+            var loop = parseInt($(this).attr("data-owl-loop"), 2);
+            if (!loop) loop = 0;
 
-            var margin = parseInt( $(this).attr("data-owl-margin"), 2);
-            if( !margin ) margin = 0;
+            var margin = parseInt($(this).attr("data-owl-margin"), 2);
+            if (!margin) margin = 0;
 
-            var autoWidth = parseInt( $(this).attr("data-owl-auto-width"), 2);
-            if( !autoWidth ) autoWidth = 0;
+            var autoWidth = parseInt($(this).attr("data-owl-auto-width"), 2);
+            if (!autoWidth) autoWidth = 0;
 
             var navContainer = $(this).attr("data-owl-nav-container");
-            if( !navContainer ) navContainer = 0;
+            if (!navContainer) navContainer = 0;
 
             var autoplay = $(this).attr("data-owl-autoplay");
-            if( !autoplay ) autoplay = 0;
+            if (!autoplay) autoplay = 0;
 
             var fadeOut = $(this).attr("data-owl-fadeout");
-            if( !fadeOut ) fadeOut = 0;
+            if (!fadeOut) fadeOut = 0;
             else fadeOut = "fadeOut";
 
-            if( $("body").hasClass("rtl") ) var rtl = true;
+            if ($("body").hasClass("rtl")) var rtl = true;
             else rtl = false;
 
-            if( items === 1 ){
+            if (items === 1) {
                 $(this).owlCarousel({
                     navContainer: navContainer,
                     animateOut: fadeOut,
@@ -128,8 +127,7 @@ $(document).ready(function($) {
                     rtl: rtl,
                     navText: []
                 });
-            }
-            else {
+            } else {
                 $(this).owlCarousel({
                     navContainer: navContainer,
                     animateOut: fadeOut,
@@ -163,8 +161,8 @@ $(document).ready(function($) {
                 });
             }
 
-            if( $(this).find(".owl-item").length === 1 ){
-                $(this).find(".owl-nav").css( { "opacity": 0,"pointer-events": "none"} );
+            if ($(this).find(".owl-item").length === 1) {
+                $(this).find(".owl-nav").css({"opacity": 0, "pointer-events": "none"});
             }
 
         });
@@ -172,12 +170,12 @@ $(document).ready(function($) {
 
     // Loading effect
 
-    Pace.on("done", function() {
-        $("#hero h1 .hero__title").each(function(i) {
+    Pace.on("done", function () {
+        $("#hero h1 .hero__title").each(function (i) {
             var $this = $(this);
             setTimeout(function () {
                 $this.addClass("in");
-            }, i* 100);
+            }, i * 100);
         });
         setTimeout(function () {
             $(".loading-screen").css("display", "none");
@@ -195,13 +193,13 @@ $(document).ready(function($) {
 
     // Reveal text effect after is in viewport
 
-    $(".reveal:not(.in)").each(function(i) {
+    $(".reveal:not(.in)").each(function (i) {
         var $this = $(this);
-        $this.isInViewport(function(status) {
+        $this.isInViewport(function (status) {
             if (status === "entered") {
                 setTimeout(function () {
                     $this.addClass("in");
-                }, i* 50);
+                }, i * 50);
             }
         });
     });
@@ -209,17 +207,17 @@ $(document).ready(function($) {
     // Magnific images popup
 
     $(".popup-image").magnificPopup({
-        type:'image',
+        type: 'image',
         fixedContentPos: false,
-        gallery: { enabled:true },
+        gallery: {enabled: true},
         removalDelay: 300,
         mainClass: 'mfp-fade',
         callbacks: {
             // This prevents pushing the entire page to the right after opening Magnific popup image
-            open: function() {
+            open: function () {
                 $(".page-wrapper, .navbar-nav").css("margin-right", getScrollBarWidth());
             },
-            close: function() {
+            close: function () {
                 $(".page-wrapper, .navbar-nav").css("margin-right", 0);
             }
         }
@@ -234,10 +232,10 @@ $(document).ready(function($) {
             mainClass: "mfp-fade",
             overflowY: "hidden",
             iframe: {
-                markup: '<div class="mfp-iframe-scaler">'+
-                '<div class="mfp-close"></div>'+
-                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-                '</div>',
+                markup: '<div class="mfp-iframe-scaler">' +
+                    '<div class="mfp-close"></div>' +
+                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                    '</div>',
                 patterns: {
                     youtube: {
                         index: 'youtube.com/',
@@ -258,17 +256,17 @@ $(document).ready(function($) {
             }
         });
     }
-	
-	//  Form Validation
 
-    $(".form .btn[type='submit']").on("click", function(e){		
+    //  Form Validation
+
+    $(".form .btn[type='submit']").on("click", function (e) {
         var button = $(this);
         var form = $(this).closest("form");
-        button.prepend("<div class='status'></div>");		
+        button.prepend("<div class='status'></div>");
         form.validate({
-            submitHandler: function() {
-                $.post("assets/php/email.php", form.serialize(),  function(response) {
-				console.log(response);
+            submitHandler: function () {
+                $.post("assets/php/email.php", form.serialize(), function (response) {
+                    console.log(response);
                     button.find(".status").append(response);
                     form.addClass("submitted");
                 });
@@ -283,18 +281,17 @@ $(document).ready(function($) {
 
 // On RESIZE actions
 
-$(window).on("resize", function(){
+$(window).on("resize", function () {
     clearTimeout(resizeId);
     resizeId = setTimeout(doneResizing, 250);
 });
 
 // On RESIZE actions
 
-$(window).on("scroll", function(){
-    if ( $(window).scrollTop() > 0 ) {
+$(window).on("scroll", function () {
+    if ($(window).scrollTop() > 0) {
         $(".navbar").addClass("bg-black")
-    }
-    else {
+    } else {
         $(".navbar").removeClass("bg-black")
     }
 });
@@ -305,14 +302,14 @@ $(window).on("scroll", function(){
 
 // Do after resize
 
-function doneResizing(){
+function doneResizing() {
     heroHeight();
 }
 
 // Set Hero height
 
-function heroHeight(){
-    $("#hero").height( $(window).height() );
+function heroHeight() {
+    $("#hero").height($(window).height());
 }
 
 // Smooth Scroll
@@ -320,7 +317,7 @@ function heroHeight(){
 $('a[href*="#"]')
     .not('[href="#"]')
     .not('[href="#0"]')
-    .on("click", function(event) {
+    .on("click", function (event) {
         if (
             location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
             &&
@@ -332,13 +329,13 @@ $('a[href*="#"]')
                 event.preventDefault();
                 $('html, body').animate({
                     scrollTop: target.offset().top
-                }, 1000, function() {
+                }, 1000, function () {
                     var $target = $(target);
                     $target.focus();
                     if ($target.is(":focus")) {
                         return false;
                     } else {
-                        $target.attr('tabindex','-1');
+                        $target.attr('tabindex', '-1');
                         $target.focus();
                     }
                 });
@@ -348,7 +345,7 @@ $('a[href*="#"]')
 
 // Return scrollbar width
 
-function getScrollBarWidth () {
+function getScrollBarWidth() {
     var $outer = $('<div>').css({visibility: 'hidden', width: 100, overflow: 'scroll'}).appendTo('body'),
         widthWithScroll = $('<div>').css({width: '100%'}).appendTo($outer).outerWidth();
     $outer.remove();
