@@ -1,7 +1,7 @@
 <?php
 mb_internal_encoding("UTF-8");
 
-$to = 'email@example.com';
+$to = 'koortttt@gmail.com';
 $subject = 'Message from Scrape Template';
 
 $name = "";
