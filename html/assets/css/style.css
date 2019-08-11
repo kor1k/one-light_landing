@@ -12,7 +12,6 @@ Body copy:		'Poppins', sans-serif; 16px;
 Headers:		'Poppins', sans-serif;
 
 -------------------------------------------------------------------*/
-
 /*------------------------------------------------------------------
 [Table of contents]
 
@@ -58,14 +57,66 @@ D. Utilities
   33. Text styling
 
 -------------------------------------------------------------------*/
-
 /*********************************************
 A. HTML Elements Styling
 *********************************************/
-
 /*-------------------------------------------
 1. A href Link
 -------------------------------------------*/
+
+
+.highlited_text {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+
+.tabs {
+    display: inline-block;
+    /*text-align: center;*/
+    margin-left: 25%;
+}
+
+.tabs > div {
+    padding-top: 10px;
+    font-size: 17px;
+}
+
+.tabs ul {
+    margin: 0px;
+    padding: 0px;
+    /*text-align: center;*/
+}
+
+.tabs ul:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 5px;
+    background: black;
+}
+
+.tabs ul li {
+    /*text-align: center;*/
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    padding: 10px 15px;
+    background: #e9eaeb;
+    color: #707070;
+}
+
+.tabs ul li.active, .tabs ul li.active:hover {
+    background: black;
+    color: #fff;
+}
+
+.tabs ul li:hover {
+    background: #d6d6d7;
+}
 
 a {
     color: #000;
@@ -118,7 +169,6 @@ a.nav-link.active i {
 /*-------------------------------------------
 2. Body, Html
 -------------------------------------------*/
-
 body, html {
     margin: 0;
     padding: 0;
@@ -144,9 +194,7 @@ body.mfp-zoom-out-cur {
 body.pace-done {
 }
 
-body.pace-done.has-loading-screen .loading-screen,
-body.pace-done.has-loading-screen .hero__link,
-body.pace-done.has-loading-screen .navbar {
+body.pace-done.has-loading-screen .loading-screen, body.pace-done.has-loading-screen .hero__link, body.pace-done.has-loading-screen .navbar {
     transition-delay: 1s;
 }
 
@@ -154,8 +202,7 @@ body.pace-done.has-loading-screen .loading-screen {
     opacity: 0;
 }
 
-body.pace-done.has-loading-screen .hero__link,
-body.pace-done.has-loading-screen .navbar {
+body.pace-done.has-loading-screen .hero__link, body.pace-done.has-loading-screen .navbar {
     opacity: 1;
 }
 
@@ -246,7 +293,6 @@ body.has-loading-screen h1 .hero__title.in:before {
 /*-------------------------------------------
 3. DL, UL Lists
 -------------------------------------------*/
-
 dl {
     margin-bottom: 1rem;
 }
@@ -268,7 +314,6 @@ ul, ol {
 /*-------------------------------------------
 4. Headings
 -------------------------------------------*/
-
 h1 {
     font-size: 6rem;
     margin-bottom: 3rem;
@@ -372,11 +417,9 @@ section {
 /*********************************************
 B. Classes
 *********************************************/
-
 /*-------------------------------------------
 5. badge
 -------------------------------------------*/
-
 .badge {
     border-radius: .1rem;
     font-size: 1.2rem;
@@ -390,7 +433,6 @@ B. Classes
 /*-------------------------------------------
 6. Big Number
 -------------------------------------------*/
-
 .big-number {
     padding-bottom: 2rem;
     padding-top: 2rem;
@@ -421,7 +463,6 @@ B. Classes
 /*-------------------------------------------
 7. Block
 -------------------------------------------*/
-
 .block {
     padding-top: 8rem;
     padding-bottom: 8rem;
@@ -462,7 +503,6 @@ B. Classes
 /*-------------------------------------------
 8. Blockquote
 -------------------------------------------*/
-
 .blockquote {
     padding: 2rem 4rem;
     position: relative;
@@ -544,13 +584,13 @@ B. Classes
 /*-------------------------------------------
 9. Box
 -------------------------------------------*/
-
 .box {
     display: block;
     height: 100%;
     padding-bottom: 3rem;
     position: relative;
-    /* ---Pricing box--- *//* ---Image box--- */
+    /* ---Pricing box--- */
+    /* ---Image box--- */
 }
 
 .box .box__wrapper {
@@ -573,13 +613,15 @@ B. Classes
 
 .box .box__content {
     padding-top: .5rem;
-    padding-bottom: .5rem; /**/
+    padding-bottom: .5rem;
+    /**/
     flex: 1 1 auto;
 }
 
 .box .box__footer {
     padding-top: .5rem;
-    padding-bottom: 1rem; /**/
+    padding-bottom: 1rem;
+    /**/
     margin-top: -3rem;
 }
 
@@ -773,7 +815,6 @@ B. Classes
 /*-------------------------------------------
 10. Carousel
 -------------------------------------------*/
-
 .carousel-gallery {
     margin-top: -6rem;
 }
@@ -815,7 +856,6 @@ B. Classes
 /*-------------------------------------------
 11. Dropdown
 -------------------------------------------*/
-
 .dropdown-menu {
     border: none;
     font-size: 1.4rem;
@@ -832,7 +872,6 @@ B. Classes
 /*-------------------------------------------
 12. Footer
 -------------------------------------------*/
-
 #footer {
     color: #fff;
     padding-top: 8rem;
@@ -848,31 +887,14 @@ B. Classes
     margin: 0;
 }
 
-#footer input[type="text"], #footer input[type="email"],
-#footer input[type="date"], #footer input[type="time"],
-#footer input[type="search"], #footer input[type="password"],
-#footer input[type="number"], #footer input[type="tel"],
-#footer textarea.form-control {
+#footer input[type="text"], #footer input[type="email"], #footer input[type="date"], #footer input[type="time"], #footer input[type="search"], #footer input[type="password"], #footer input[type="number"], #footer input[type="tel"], #footer textarea.form-control {
     background-color: transparent;
     border-color: rgba(255, 255, 255, .3);
     color: #fff;
     box-shadow: none;
 }
 
-#footer input[type="text"]:active, #footer input[type="text"]:focus,
-#footer input[type="text"]:hover, #footer input[type="email"]:active,
-#footer input[type="email"]:focus, #footer input[type="email"]:hover,
-#footer input[type="date"]:active, #footer input[type="date"]:focus,
-#footer input[type="date"]:hover, #footer input[type="time"]:active,
-#footer input[type="time"]:focus, #footer input[type="time"]:hover,
-#footer input[type="search"]:active, #footer input[type="search"]:focus,
-#footer input[type="search"]:hover, #footer input[type="password"]:active,
-#footer input[type="password"]:focus, #footer input[type="password"]:hover,
-#footer input[type="number"]:active, #footer input[type="number"]:focus,
-#footer input[type="number"]:hover, #footer input[type="tel"]:active,
-#footer input[type="tel"]:focus, #footer input[type="tel"]:hover,
-#footer textarea.form-control:active, #footer textarea.form-control:focus,
-#footer textarea.form-control:hover {
+#footer input[type="text"]:active, #footer input[type="text"]:focus, #footer input[type="text"]:hover, #footer input[type="email"]:active, #footer input[type="email"]:focus, #footer input[type="email"]:hover, #footer input[type="date"]:active, #footer input[type="date"]:focus, #footer input[type="date"]:hover, #footer input[type="time"]:active, #footer input[type="time"]:focus, #footer input[type="time"]:hover, #footer input[type="search"]:active, #footer input[type="search"]:focus, #footer input[type="search"]:hover, #footer input[type="password"]:active, #footer input[type="password"]:focus, #footer input[type="password"]:hover, #footer input[type="number"]:active, #footer input[type="number"]:focus, #footer input[type="number"]:hover, #footer input[type="tel"]:active, #footer input[type="tel"]:focus, #footer input[type="tel"]:hover, #footer textarea.form-control:active, #footer textarea.form-control:focus, #footer textarea.form-control:hover {
     border-color: rgba(255, 255, 255, .8);
 }
 
@@ -899,7 +921,6 @@ B. Classes
 /*-------------------------------------------
 13. Footer
 -------------------------------------------*/
-
 .gallery {
     position: relative;
 }
@@ -945,7 +966,6 @@ B. Classes
 /*-------------------------------------------
 14. Hero
 -------------------------------------------*/
-
 @keyframes animation--hero-link--arrow {
     0% {
         top: 1rem;
@@ -1110,7 +1130,7 @@ B. Classes
     top: 0;
     content: "";
     background-color: #000;
-    opacity: 0;
+    opacity: 0.85;
     transition: .3s ease;
     z-index: -1;
 }
@@ -1142,7 +1162,6 @@ B. Classes
 /*-------------------------------------------
 15. List
 -------------------------------------------*/
-
 .list {
     /* ---Text List--- */
 }
@@ -1180,7 +1199,6 @@ B. Classes
 /*-------------------------------------------
 16. Loading screen
 -------------------------------------------*/
-
 .loading-screen {
     background-color: #000;
     position: fixed;
@@ -1195,7 +1213,6 @@ B. Classes
 /*-------------------------------------------
 17. Map
 -------------------------------------------*/
-
 .map-wrapper {
     position: relative;
 }
@@ -1218,7 +1235,6 @@ B. Classes
 /*-------------------------------------------
 18. Modal
 -------------------------------------------*/
-
 .modal {
     text-align: center;
 }
@@ -1317,7 +1333,6 @@ B. Classes
 }
 
 /* overlay at start */
-
 .mfp-fade.mfp-bg {
     opacity: 0;
     background-color: #000;
@@ -1327,19 +1342,16 @@ B. Classes
 }
 
 /* overlay animate in */
-
 .mfp-fade.mfp-bg.mfp-ready {
     opacity: .8;
 }
 
 /* overlay animate out */
-
 .mfp-fade.mfp-bg.mfp-removing {
     opacity: 0;
 }
 
 /* content at start */
-
 .mfp-fade.mfp-wrap .mfp-content {
     opacity: 0;
     -webkit-transition: all .15s ease-out;
@@ -1348,13 +1360,11 @@ B. Classes
 }
 
 /* content animate it */
-
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
     opacity: 1;
 }
 
 /* content animate out */
-
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
     opacity: 0;
 }
@@ -1362,7 +1372,6 @@ B. Classes
 /*-------------------------------------------
 19. Navbar
 -------------------------------------------*/
-
 .navbar {
     padding: 3rem;
     font-size: 1.3rem;
@@ -1402,7 +1411,6 @@ B. Classes
 /*-------------------------------------------
 20. Owl Carousel
 -------------------------------------------*/
-
 .owl-carousel .owl-item .img-into-bg img {
     display: none;
 }
@@ -1451,7 +1459,6 @@ B. Classes
 /*-------------------------------------------
 21. Pace Loading
 -------------------------------------------*/
-
 .pace {
     -webkit-pointer-events: none;
     pointer-events: none;
@@ -1501,7 +1508,6 @@ B. Classes
 /*-------------------------------------------
 22. Person
 -------------------------------------------*/
-
 .person {
     position: relative;
     text-align: center;
@@ -1569,7 +1575,6 @@ B. Classes
 /*-------------------------------------------
 23. Progress Bar
 -------------------------------------------*/
-
 .prog-bar {
     margin-bottom: 3rem;
     position: relative;
@@ -1609,7 +1614,6 @@ B. Classes
 /*-------------------------------------------
 24. Slider Navigation
 -------------------------------------------*/
-
 .slider-nav {
     bottom: 7rem;
     position: absolute;
@@ -1624,11 +1628,9 @@ B. Classes
 /*********************************************
 C. Forms
 *********************************************/
-
 /*-------------------------------------------
 25. Buttons
 -------------------------------------------*/
-
 .btn {
     display: inline-block;
     position: relative;
@@ -1688,8 +1690,7 @@ C. Forms
     border-color: #000;
 }
 
-.btn.btn-framed.btn-primary:hover, .btn.btn-framed.btn-primary:focus,
-.btn.btn-framed.btn-primary:active {
+.btn.btn-framed.btn-primary:hover, .btn.btn-framed.btn-primary:focus, .btn.btn-framed.btn-primary:active {
     background-color: #000;
     border-color: #000;
     box-shadow: none;
@@ -1700,8 +1701,7 @@ C. Forms
     color: #868e96;
 }
 
-.btn.btn-framed.btn-secondary:hover, .btn.btn-framed.btn-secondary:focus,
-.btn.btn-framed.btn-secondary:active {
+.btn.btn-framed.btn-secondary:hover, .btn.btn-framed.btn-secondary:focus, .btn.btn-framed.btn-secondary:active {
     background-color: #868e96;
     color: #fff;
 }
@@ -1710,8 +1710,7 @@ C. Forms
     color: #1e7e34;
 }
 
-.btn.btn-framed.btn-success:hover, .btn.btn-framed.btn-success:focus,
-.btn.btn-framed.btn-success:active {
+.btn.btn-framed.btn-success:hover, .btn.btn-framed.btn-success:focus, .btn.btn-framed.btn-success:active {
     background-color: #1e7e34;
     color: #fff;
 }
@@ -1720,8 +1719,7 @@ C. Forms
     color: #dc3545;
 }
 
-.btn.btn-framed.btn-danger:hover, .btn.btn-framed.btn-danger:focus,
-.btn.btn-framed.btn-danger:active {
+.btn.btn-framed.btn-danger:hover, .btn.btn-framed.btn-danger:focus, .btn.btn-framed.btn-danger:active {
     background-color: #dc3545;
     color: #fff;
 }
@@ -1730,8 +1728,7 @@ C. Forms
     color: #ffc107;
 }
 
-.btn.btn-framed.btn-warning:hover, .btn.btn-framed.btn-warning:focus,
-.btn.btn-framed.btn-warning:active {
+.btn.btn-framed.btn-warning:hover, .btn.btn-framed.btn-warning:focus, .btn.btn-framed.btn-warning:active {
     background-color: #ffc107;
     color: #fff;
 }
@@ -1740,8 +1737,7 @@ C. Forms
     color: #17a2b8;
 }
 
-.btn.btn-framed.btn-info:hover, .btn.btn-framed.btn-info:focus,
-.btn.btn-framed.btn-info:active {
+.btn.btn-framed.btn-info:hover, .btn.btn-framed.btn-info:focus, .btn.btn-framed.btn-info:active {
     background-color: #17a2b8;
     color: #fff;
 }
@@ -1751,8 +1747,7 @@ C. Forms
     border-color: rgba(0, 0, 0, .06);
 }
 
-.btn.btn-framed.btn-light:hover, .btn.btn-framed.btn-light:focus,
-.btn.btn-framed.btn-light:active {
+.btn.btn-framed.btn-light:hover, .btn.btn-framed.btn-light:focus, .btn.btn-framed.btn-light:active {
     background-color: rgba(0, 0, 0, .06);
 }
 
@@ -1784,10 +1779,7 @@ C. Forms
 /*-------------------------------------------
 26. Input
 -------------------------------------------*/
-
-input[type="text"], input[type="email"], input[type="date"], input[type="time"],
-input[type="search"], input[type="password"], input[type="number"],
-input[type="tel"], textarea.form-control {
+input[type="text"], input[type="email"], input[type="date"], input[type="time"], input[type="search"], input[type="password"], input[type="number"], input[type="tel"], textarea.form-control {
     border: .2rem solid rgba(0, 0, 0, .15);
     border-radius: .3rem;
     color: #363636;
@@ -1802,24 +1794,11 @@ input[type="tel"], textarea.form-control {
     padding: 1.5rem;
 }
 
-input[type="text"]:active, input[type="text"]:focus, input[type="text"]:hover,
-input[type="email"]:active, input[type="email"]:focus, input[type="email"]:hover,
-input[type="date"]:active, input[type="date"]:focus, input[type="date"]:hover,
-input[type="time"]:active, input[type="time"]:focus, input[type="time"]:hover,
-input[type="search"]:active, input[type="search"]:focus,
-input[type="search"]:hover, input[type="password"]:active,
-input[type="password"]:focus, input[type="password"]:hover,
-input[type="number"]:active, input[type="number"]:focus,
-input[type="number"]:hover, input[type="tel"]:active, input[type="tel"]:focus,
-input[type="tel"]:hover, textarea.form-control:active,
-textarea.form-control:focus, textarea.form-control:hover {
+input[type="text"]:active, input[type="text"]:focus, input[type="text"]:hover, input[type="email"]:active, input[type="email"]:focus, input[type="email"]:hover, input[type="date"]:active, input[type="date"]:focus, input[type="date"]:hover, input[type="time"]:active, input[type="time"]:focus, input[type="time"]:hover, input[type="search"]:active, input[type="search"]:focus, input[type="search"]:hover, input[type="password"]:active, input[type="password"]:focus, input[type="password"]:hover, input[type="number"]:active, input[type="number"]:focus, input[type="number"]:hover, input[type="tel"]:active, input[type="tel"]:focus, input[type="tel"]:hover, textarea.form-control:active, textarea.form-control:focus, textarea.form-control:hover {
     border: .2rem solid rgba(0, 0, 0, .25);
 }
 
-input[type="text"].small, input[type="email"].small, input[type="date"].small,
-input[type="time"].small, input[type="search"].small,
-input[type="password"].small, input[type="number"].small,
-input[type="tel"].small, textarea.form-control.small {
+input[type="text"].small, input[type="email"].small, input[type="date"].small, input[type="time"].small, input[type="search"].small, input[type="password"].small, input[type="number"].small, input[type="tel"].small, textarea.form-control.small {
     padding: 1rem;
 }
 
@@ -1843,7 +1822,6 @@ label {
 /*-------------------------------------------
 27. Form
 -------------------------------------------*/
-
 .form .status {
     transform: scale(.1);
     transition: .3s ease;
@@ -1947,11 +1925,9 @@ textarea.form-control {
 /*********************************************
 D. Utilities
 *********************************************/
-
 /*-------------------------------------------
 28. Background
 -------------------------------------------*/
-
 .background-wrapper {
     position: absolute;
     bottom: 0;
@@ -1996,8 +1972,7 @@ D. Utilities
     background-repeat: repeat-y;
 }
 
-.background--image.background--repeat-repeat,
-.img-into-bg.background--repeat-repeat {
+.background--image.background--repeat-repeat, .img-into-bg.background--repeat-repeat {
     background-repeat: repeat;
     background-size: inherit;
 }
@@ -2038,7 +2013,8 @@ D. Utilities
 }
 
 [data-parallax="scroll"] .parallax-element {
-    background-position-x: 50%; /*background-size: inherit;*/
+    background-position-x: 50%;
+    /*background-size: inherit;*/
     transform: translateY(0);
     overflow: visible;
     position: relative;
@@ -2046,9 +2022,9 @@ D. Utilities
 }
 
 /*background-image: none !important;*/
-
 [data-parallax="scroll"] .parallax-element img {
-    /*display: block; width: 100%;*//*position: absolute; bottom: 0;*/
+    /*display: block; width: 100%;*/
+    /*position: absolute; bottom: 0;*/
 }
 
 .pack {
@@ -2097,7 +2073,6 @@ D. Utilities
 /*-------------------------------------------
 29. Height
 -------------------------------------------*/
-
 .height-100px {
     height: 6.25rem;
 }
@@ -2177,7 +2152,6 @@ D. Utilities
 /*-------------------------------------------
 30. Width
 -------------------------------------------*/
-
 .width-10 {
     width: 10%;
 }
@@ -2269,7 +2243,6 @@ D. Utilities
 /*-------------------------------------------
 31. Opacity
 -------------------------------------------*/
-
 .opacity-5 {
     opacity: .05;
 }
@@ -2361,7 +2334,6 @@ D. Utilities
 /*-------------------------------------------
 32. Skew background
 -------------------------------------------*/
-
 .skew-up-right {
     position: relative;
 }
@@ -2445,7 +2417,6 @@ D. Utilities
 /*-------------------------------------------
 33. Text styling
 -------------------------------------------*/
-
 .text-align-right {
     text-align: right;
 }
@@ -2469,23 +2440,18 @@ D. Utilities
 /*********************************************
 E. Responsive
 *********************************************/
-
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // 1200px and up
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // 992px - 1199px
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // 768px - 991px
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // max to 767px
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
 @media screen and (min-width: 48rem) {
     .modal:before {
         display: inline-block;
@@ -2761,5 +2727,11 @@ E. Responsive
 
     .push-up {
         top: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .tabs {
+        margin-left: 1%;
     }
 }
