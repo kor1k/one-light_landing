@@ -1,86 +1,73 @@
-/*------------------------------------------------------------------
-[Master Stylesheet]
-
-Project:	    Scrape - Creative Portfolio Template
-
-Author:         ThemeStarz
-WebSite:        https://themeforest.net/user/themestarz/portfolio
-Default Color:  #000;
-Text Color:     #363636;
-Version:        1.0
-Body copy:		'Poppins', sans-serif; 16px;
-Headers:		'Poppins', sans-serif;
-
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-[Table of contents]
-
-A. HTML Elements Styling
-  1. A href Link
-  2. Body, Html
-  3. DL, UL Lists
-  4. Headings
-
-B. Classes
-  5. badge
-  6. Big Number
-  7. Block
-  8. Blockquote
-  9. Box
-  10. Carousel
-  11. Dropdown
-  12. Footer
-  13. Footer
-  14. Hero
-  15. List
-  16. Loading screen
-  17. Map
-  18. Modal
-  19. Navbar
-  20. Owl Carousel
-  21. Pace Loading
-  22. Person
-  23. Progress Bar
-  24. Slider Navigation
-
-C. Forms
-  25. Buttons
-  26. Input
-  27. Form
-
-D. Utilities
-  28. Background
-  29. Height
-  30. Width
-  31. Opacity
-  32. Skew background
-  33. Text styling
-
--------------------------------------------------------------------*/
-/*********************************************
-A. HTML Elements Styling
-*********************************************/
-/*-------------------------------------------
-1. A href Link
--------------------------------------------*/
-
-
-.highlited_text {
-    font-size: 20px;
-    font-weight: 700;
-    margin: 10px 0;
+figure {
+    font-size: 18px;
 }
 
+.show__tab {
+    display: block;
+}
+
+.hide__tab {
+    display: none;
+}
+
+.tabs__example__title_1,
+.tabs__example__title_2,
+.tabs__example__title_3,
+.tabs__example__title_4 {
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    width: 200px;
+    margin: 12px auto;
+    cursor: pointer;
+}
+
+/*.tabs__example_1,*/
+/*.tabs__example_2,*/
+/*.tabs__example_3,*/
+/*.tabs__example_4 {*/
+/*display: none;*/
+/*color: red;*/
+/*}*/
+
+section#the-team {
+    /* background: #87cefa; */
+    /*background-color: #fff3e0;*/
+}
+
+.color_white {
+    color: white;
+}
+
+.text__gray__color {
+    color: #616161;
+    font-size: 19px;
+}
+
+.tabs__content_line {
+    border: 1px solid black;
+    padding: 20px 30px 10px 30px;
+}
+
+.highlited_text {
+    font-size: 25px;
+    font-weight: 700;
+    /* margin: 11px 0; */
+    /* padding-bottom: 10px; */
+    line-height: 38px;
+}
 
 .tabs {
     display: inline-block;
     /*text-align: center;*/
-    margin-left: 25%;
+    color: #616161;
+    /* margin-left: 25%; */
 }
 
 .tabs > div {
-    padding-top: 10px;
+    /* padding-top: 10px; */
     font-size: 17px;
+    margin-bottom: 75px;
 }
 
 .tabs ul {
@@ -470,7 +457,7 @@ B. Classes
 }
 
 .block .block__title {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 
 .block .block__title h2 {
@@ -881,6 +868,8 @@ B. Classes
 
 #footer a {
     color: #fff;
+    margin-left: 10px;
+    font-size: 18px;
 }
 
 #footer .background--particles {
@@ -2733,5 +2722,52 @@ E. Responsive
 @media (max-width: 500px) {
     .tabs {
         margin-left: 1%;
+    }
+
+    .block .block__title h2 {
+        font-size: 30px;
+    }
+
+    .highlited_text {
+        margin-top: 20px;
+    }
+
+    .block__title > h2 {
+        text-align: center;
+    }
+
+    .contacts_mobile {
+        text-align: center;
+    }
+
+    .person {
+        position: relative;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .tabs ul li {
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        cursor: pointer;
+        display: block;
+        float: none;
+        padding: 10px 15px;
+        background: #e9eaeb;
+        color: #707070;
+        width: 300px;
+        margin: 0 auto;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+
+    figure {
+        text-align: center;
+    }
+
+    .py-4 > h4 {
+        text-align: center;
     }
 }
