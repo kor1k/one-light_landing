@@ -1,3 +1,11 @@
+.price__value {
+    font-weight: 900;
+}
+
+.animate__tab {
+    animation: ease-in-out;
+}
+
 .gallery {
     display: flex;
 }
@@ -98,11 +106,13 @@ figure {
 .tabs__example__title_3,
 .tabs__example__title_4 {
     text-align: center;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 10px;
     width: 200px;
-    margin: 12px auto;
+    margin: 19px auto;
     cursor: pointer;
+    font-weight: 900;
+    font-size: 22px;
 }
 
 /*.tabs__example_1,*/
@@ -177,6 +187,7 @@ section#the-team {
     padding: 10px 15px;
     background: #e9eaeb;
     color: #707070;
+    font-size: 17px;
 }
 
 .tabs ul li.active, .tabs ul li.active:hover {

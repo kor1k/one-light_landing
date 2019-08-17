@@ -1,3 +1,6 @@
+$('.tabs > ul > li').on('click', function () {
+    $('.tab__item').addClass('animate__tab');
+})
 // const modal = document.querySelector('.modal_tab')
 // const modalImage = document.querySelector('.modalImage')
 // const thumbnails = document.querySelectorAll('.thumbnail_tab');
