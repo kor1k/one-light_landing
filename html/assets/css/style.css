@@ -1,7 +1,13 @@
+.img__holder__special {
+    width: 500px;
+    height: 350px;
+}
+
 .price_1_info__title,
 .price_2_info__title,
 .price_3_info__title,
 .price_4_info__title {
+    cursor: pointer;
     border-bottom: 4px solid black;
     width: 158px;
 }
