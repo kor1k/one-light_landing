@@ -1,20 +1,6 @@
 $('.tabs > ul > li').on('click', function () {
     $('.tab__item').addClass('animate__tab');
 })
-// const modal = document.querySelector('.modal_tab')
-// const modalImage = document.querySelector('.modalImage')
-// const thumbnails = document.querySelectorAll('.thumbnail_tab');
-//
-// thumbnails.forEach(thumbnail => {
-//     thumbnail.addEventListener('click', evt => {
-//         modal.classList.remove('hidden');
-//         modalImage.setAttribute('src', evt.target.getAttribute('src'));
-//     })
-// });
-//
-// modal.addEventListener('click', evt => {
-//     modal.classList.add('hidden');
-// });
 
 
 var image;
@@ -76,5 +62,24 @@ $(document).ready(function () {
     $('.tabs__example__title_4').on('click', function () {
         $('.tabs__example_4').toggleClass('hide__tab');
     });
+
+
+    // ___________________________
+    // ___________________________
+    // ___________________________
+
+    $('.price_1_info__title').on('click', function () {
+        $('.price_1_info').toggleClass('hide__tab_2')
+    });
+    $('.price_2_info__title').on('click', function () {
+        $('.price_2_info').toggleClass('hide__tab_2')
+    });
+    $('.price_3_info__title').on('click', function () {
+        $('.price_3_info').toggleClass('hide__tab_2')
+    });
+    $('.price_4_info__title').on('click', function () {
+        $('.price_4_info').toggleClass('hide__tab_2')
+    });
+
 
 });

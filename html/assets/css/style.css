@@ -1,3 +1,15 @@
+.price_1_info__title,
+.price_2_info__title,
+.price_3_info__title,
+.price_4_info__title {
+    border-bottom: 4px solid black;
+    width: 158px;
+}
+
+.tabs__example_1.tab__item {
+    margin-bottom: 50px;
+}
+
 .price_1_info > p,
 .price_2_info > p,
 .price_3_info > p,
@@ -106,6 +118,10 @@ figure {
 }
 
 .hide__tab {
+    display: none;
+}
+
+.hide__tab_2 {
     display: none;
 }
 
