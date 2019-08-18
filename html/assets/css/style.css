@@ -1,3 +1,11 @@
+.price_1_info > p,
+.price_2_info > p,
+.price_3_info > p,
+.price_4_info > p {
+    color: black;
+    font-size: 21px;
+}
+
 .price__value {
     font-weight: 900;
 }
